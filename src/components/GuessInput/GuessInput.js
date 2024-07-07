@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 function GuessInput({ input, setInput, submitGuess }) {
   return (
@@ -12,6 +12,7 @@ function GuessInput({ input, setInput, submitGuess }) {
     >
       <label htmlFor="guess-input">Enter Guess:</label>
       <input
+        id="guess-input"
         value={input}
         pattern="[a-zA-Z]{5}"
         title="5 letter word"

@@ -1,9 +1,15 @@
-import React from 'react';
+import React from "react";
 
-function GuessList() {
+function GuessList({ guessList }) {
   return (
     <div className="guess-results">
-      <div className="guess">banana</div>
+      {guessList.map((guess, id) => {
+        return (
+          <p key={id} className="guess">
+            {guess.label}
+          </p>
+        );
+      })}
     </div>
   );
 }
